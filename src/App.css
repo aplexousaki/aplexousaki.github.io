@@ -1,20 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+html{
+  scroll-behavior: smooth;
+}
 .App {
-  text-align: center;
+  /* text-align: center; */
+  background-color: black;
+  font-family:  "Montserrat", sans-serif;
+  color: white;
+  width: 100%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
 
 .App-header {
-  background-color: #282c34;
+  background-color: black;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -22,17 +20,222 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  
 }
 
-.App-link {
-  color: #61dafb;
+.Jumbotron {
+  width: 90vw;
+  display: flex;
+  margin: 0 auto;
+  border-radius: 20px;
+  margin-bottom: 8%;
+  margin-top: 2%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.NavBar{
+  background-color: rgba(0, 0, 0, 0.73);
+  padding: 5px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+  /* box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
+  margin-bottom: 1%;
+  position: sticky;
+  top:0;
+}
+
+.NavBarLogo{
+  width: 80px;
+  height: 80px;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+.NavItem{
+  width: auto;
+  height: 20px;
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  color: #B1EDE8;
+  cursor: pointer;
+  font-family:  "Montserrat", sans-serif;
+  margin-right: 3vw;
+  outline: none;
+  position:relative;
+}
+
+.NavItem::after,
+.NavItem::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to right, #FF00B2, #00ffff);
+  bottom: -5px;
+  left: 0;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.4s ease-out;
+}
+
+.NavItem::before {
+  top: -5px;
+  transform-origin: left;
+}
+
+.NavItem:hover::after,
+.NavItem:hover::before {
+  transform: scaleX(1);
+}
+
+.PrimaryButton{
+  width: 8vw;
+  height: 35px;
+  background-color: white;
+  color: #FF00B2;
+  font-weight: 700;
+  font-size: 1.1rem;
+  font-family: "Montserrat", sans-serif;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  transition: .5s;
+  position: relative;
+  margin-right: 20px;
+}
+.PrimaryButton span{
+  position: relative;
+  color: #FF00B2;
+  transition: .5s;
+  z-index: 3;
+}
+.PrimaryButton:hover span{
+  color: white;
+}
+.PrimaryButton::before{
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, #FF00B2, #00ffff);
+  transition: .5s;
+  z-index: 3;
+}
+
+.PrimaryButton:hover::before{
+  top:0;
+  color: white;
+  background: linear-gradient(to right, #FF00B2, #00ffff);
+}
+
+.AboutMe{
+  width: 100%;
+  height: 800px;
+  display: inline-block;
+  overflow: hidden;
+  position: relative;
+  background-image: url('./assets/blobs.png');
+  background-size:cover;
+}
+.AboutMe h1{
+  margin-left: 10%;
+}
+ 
+.Blobs{
+  pointer-events: none;
+  position: absolute;
+  width: 100%;
+  height: 90%;
+  z-index: 0;
+  opacity: 0.8;
+}
+
+.GlassCard{
+  width: 85%;
+  height: 60%;
+  margin-top: 2%;
+  background: rgba(255, 255, 255, 0.309);
+  backdrop-filter: blur(20px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: row;
+  padding-left: 10px;
+  justify-content: center;
+  align-items: center;
+  margin-left: 10%;
+}
+
+.GlassCard p{
+  font-size: 1.4rem;
+  width: 60%;
+}
+.GlassCard img{
+  bottom: 0;
+}
+
+.GlassCard div{
+  height: 100%;
+  display: flex;
+}
+
+.cardcontainer{
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+}
+.holographic-card {
+  width: 60px;
+  height: 60px;
+  background: #111;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  border-radius: 50px;
+  transition: all 0.5s ease;
+}
+.holographic-card img{
+  width: 30px;
+  height: 30px;
+}
+.holographic-card h2 {
+  color: #0ff;
+  font-size: 2rem;
+  position: relative;
+  z-index: 2;
+}
+
+.holographic-card::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    0deg, 
+    transparent, 
+    transparent 30%, 
+    rgba(0,255,255,0.3)
+  );
+  transform: rotate(-45deg);
+  transition: all 0.5s ease;
+  opacity: 0;
+}
+
+.holographic-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(0,255,255,0.5);
+}
+
+.holographic-card:hover::before {
+  opacity: 1;
+  transform: rotate(-45deg) translateY(100%);
 }
