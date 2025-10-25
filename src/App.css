@@ -54,7 +54,7 @@ html{
 }
 .NavItem{
   width: auto;
-  height: 20px;
+  height: 30px;
   background: none;
   border: none;
   font-size: 1.2rem;
@@ -64,6 +64,7 @@ html{
   margin-right: 3vw;
   outline: none;
   position:relative;
+  border-radius: 5px;
 }
 
 .NavItem::after,
@@ -87,6 +88,11 @@ html{
 
 .NavItem:hover::after,
 .NavItem:hover::before {
+  transform: scaleX(1);
+}
+
+.NavItem.active::after,
+.NavItem.active::before {
   transform: scaleX(1);
 }
 
@@ -228,11 +234,13 @@ html{
   transform: rotate(-45deg);
   transition: all 0.5s ease;
   opacity: 0;
+  cursor:pointer;
 }
 
 .holographic-card:hover {
   transform: scale(1.05);
   box-shadow: 0 0 20px rgba(0,255,255,0.5);
+  cursor:pointer;
 }
 
 .holographic-card:hover::before {
