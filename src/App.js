@@ -1,5 +1,5 @@
-import "./App.css";
-import jumbotron from "./assets/jumbotron-black.png";
+import "./styles/App.css";
+import jumbotron from "./assets/jumbotron-blob.png";
 import logo from "./assets/logo.png";
 import NavItem from "./NavItem";
 import vr_photo from "./assets/vr_photo.png";
@@ -16,48 +16,69 @@ function App() {
     { id: "beyond", label: "Beyond Code" },
   ];
 
-  const [activeSection, setActiveSection] = useState("home");
+  const [activeSection, setActiveSection] = useState("null");
 
   useEffect(() => {
-    const observerOptions = {
-      root: null,
-      rootMargin: "0px",
-      threshold: 0.6, // section is considered active when 60% visible
+    const NAV_OFFSET = 80; // px — match your navbar height
+    const sectionEls = sections
+      .map((s) => document.getElementById(s.id))
+      .filter(Boolean);
+
+    const updateActive = () => {
+      if (sectionEls.length === 0) return;
+
+      const scrollPos = window.scrollY + NAV_OFFSET + 1; // +1 to avoid equality jitter
+      let current = sections[0].id;
+
+      for (const el of sectionEls) {
+        if (el.offsetTop <= scrollPos) {
+          current = el.id;
+        } else {
+          break; // because sections are in order top→bottom
+        }
+      }
+
+      // If we are at (or extremely near) the bottom, force the last section active
+      const nearBottom =
+        Math.ceil(window.innerHeight + window.scrollY) >=
+        document.documentElement.scrollHeight;
+      if (nearBottom) current = sections[sections.length - 1].id;
+
+      setActiveSection((prev) => (prev === current ? prev : current));
     };
 
-     const observer = new IntersectionObserver((entries) => {
-    const visibleSections = entries
-      .filter(entry => entry.isIntersecting)
-      .map(entry => entry.target.id);
+    // Run on load and on scroll/resize
+    updateActive();
+    let ticking = false;
+    const onScroll = () => {
+      if (!ticking) {
+        requestAnimationFrame(() => {
+          updateActive();
+          ticking = false;
+        });
+        ticking = true;
+      }
+    };
 
-    if (visibleSections.length > 0) {
-      // Set the last visible section as active (lowest one in view)
-      setActiveSection(visibleSections[visibleSections.length - 1]);
-    } else {
-      // If user scrolls above all sections, deactivate all
-      setActiveSection(null);
-    }
-  }, observerOptions);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("resize", onScroll);
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      window.removeEventListener("resize", onScroll);
+    };
+  }, [sections]);
 
-  sections.forEach(section => {
-    const element = document.getElementById(section.id);
-    if (element) observer.observe(element);
-  });
 
-  return () => {
-    sections.forEach(section => {
-      const element = document.getElementById(section.id);
-      if (element) observer.unobserve(element);
-    });
-    observer.disconnect();
+  const handleScrollTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
-}, [sections]);
 
   return (
     <div className="App">
-      <BlobCursor/>
+      <BlobCursor />
       <div className="NavBar">
-        <img className="NavBarLogo" src={logo} alt="logo"></img>
+        <button onClick={handleScrollTop} className="LogoButton"><img className="NavBarLogo" src={logo} alt="logo"></img></button>
+        
         <div>
           {sections.map((section) => (
             <NavItem
@@ -65,25 +86,20 @@ function App() {
               targetId={section.id}
               label={section.label}
               isActive={activeSection === section.id}
+              onClick={() => setActiveSection(section.id)}
             />
           ))}
-          {/* <NavItem label="About Me" targetId="aboutMe"/>
-          <NavItem label="Experience" targetId="experience"/>
-          <NavItem label="Education" targetId="education"/>
-          <NavItem label="Skills" targetId="skills"/>
-          <NavItem label="Projects" targetId="projects"/>
-          <NavItem label="Beyond Code" targetId="beyond" /> */}
         </div>
 
-        <button class="PrimaryButton">
+        <button className="PrimaryButton">
           <span>Contact Me</span>
         </button>
       </div>
 
       <img src={jumbotron} className="Jumbotron" alt="Jumbotron" />
 
-      <div className="AboutMe">
-        <h1 id="aboutMe">About Me</h1>
+      <div id="aboutMe" className="AboutMe" data-section>
+        <h1>About Me</h1>
         <div className="GlassCard">
           <div>
             <img src={vr_photo} alt="Just me wearing a VR headset" />
@@ -102,11 +118,13 @@ function App() {
         </div>
       </div>
 
-      <div className="cardcontainer">
-        <ScrollToTopButton />
-        
+      <div className="Experience" data-section>
+        <h1 id="experience">Experience</h1>
       </div>
-      
+
+      <div className="ScrollToTopContainer">
+        <ScrollToTopButton />
+      </div>
     </div>
   );
 }

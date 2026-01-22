@@ -1,15 +1,50 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-html{
-  scroll-behavior: smooth;
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  --nav-h: 80px; /* actual navbar height */
 }
+
+/* NEW: remove browser default outer gap */
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+/* Keep smooth anchor scrolling aligned with sticky navbar */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--nav-h);
+}
+
+/* Scroll targets get their own offset (no global padding needed) */
+/* NEW: flow-root prevents heading margin-collapsing from creating fake top space */
+[data-section] {
+  scroll-margin-top: var(--nav-h);
+  display: flow-root; /* new */
+}
+
+/* OPTIONAL but helpful: stop first child (often h1) from pushing section down */
+[data-section] > *:first-child {
+  margin-top: 0; /* new */
+}
+
+/* You can keep this if you still use invisible anchors; it won't add space */
+.section-anchor {
+  position: relative;
+  display: block;
+  height: 0; /* zero-height */
+  scroll-margin-top: var(--nav-h);
+}
+
 .App {
   /* text-align: center; */
   background-color: black;
-  font-family:  "Montserrat", sans-serif;
+  font-family: "Montserrat", sans-serif;
   color: white;
   width: 100%;
+  /* REMOVED: was causing the site-wide gap */
+  /* padding-top: var(--nav-h); */
 }
-
 
 .App-header {
   background-color: black;
@@ -20,7 +55,6 @@ html{
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
-  
 }
 
 .Jumbotron {
@@ -28,52 +62,53 @@ html{
   display: flex;
   margin: 0 auto;
   border-radius: 20px;
-  margin-bottom: 8%;
-  margin-top: 2%;
+  margin-top: 0; /* was 2% */
 }
 
-.NavBar{
-  background-color: rgba(0, 0, 0, 0.73);
+.NavBar {
+  background-color: rgba(0, 0, 0, 0.83);
   padding: 5px;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  height: 80px;
+  height: var(--nav-h);
   /* box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
   margin-bottom: 1%;
   position: sticky;
-  top:0;
+  top: 0;
+  z-index: 1;
 }
 
-.NavBarLogo{
+.NavBarLogo {
   width: 80px;
   height: 80px;
   margin-left: 10px;
   margin-top: 10px;
 }
-.NavItem{
+
+.NavItem {
   width: auto;
   height: 30px;
   background: none;
   border: none;
   font-size: 1.2rem;
-  color: #B1EDE8;
+  color: #b1ede8;
   cursor: pointer;
-  font-family:  "Montserrat", sans-serif;
+  font-family: "Montserrat", sans-serif;
   margin-right: 3vw;
   outline: none;
-  position:relative;
+  position: relative;
   border-radius: 5px;
 }
 
 .NavItem::after,
 .NavItem::before {
-  content: '';
+  content: "";
   position: absolute;
   width: 100%;
   height: 2px;
-  background: linear-gradient(to right, #FF00B2, #00ffff);
+  background: linear-gradient(to right, #ff00b2, #00ffff);
   bottom: -5px;
   left: 0;
   transform: scaleX(0);
@@ -96,11 +131,11 @@ html{
   transform: scaleX(1);
 }
 
-.PrimaryButton{
+.PrimaryButton {
   width: 8vw;
   height: 35px;
   background-color: white;
-  color: #FF00B2;
+  color: #ff00b2;
   font-weight: 700;
   font-size: 1.1rem;
   font-family: "Montserrat", sans-serif;
@@ -108,51 +143,58 @@ html{
   border: none;
   cursor: pointer;
   overflow: hidden;
-  transition: .5s;
+  transition: 0.5s;
   position: relative;
   margin-right: 20px;
 }
-.PrimaryButton span{
+
+.PrimaryButton span {
   position: relative;
-  color: #FF00B2;
-  transition: .5s;
+  color: #ff00b2;
+  transition: 0.5s;
   z-index: 3;
 }
-.PrimaryButton:hover span{
+
+.PrimaryButton:hover span {
   color: white;
 }
-.PrimaryButton::before{
+
+.PrimaryButton::before {
   content: "";
   position: absolute;
   top: 100%;
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to right, #FF00B2, #00ffff);
-  transition: .5s;
+  background: linear-gradient(to right, #ff00b2, #00ffff);
+  transition: 0.5s;
   z-index: 3;
 }
 
-.PrimaryButton:hover::before{
-  top:0;
+.PrimaryButton:hover::before {
+  top: 0;
   color: white;
-  background: linear-gradient(to right, #FF00B2, #00ffff);
+  background: linear-gradient(to right, #ff00b2, #00ffff);
 }
 
-.AboutMe{
+.AboutMe {
   width: 100%;
   height: 800px;
   display: inline-block;
   overflow: hidden;
   position: relative;
-  background-image: url('./assets/blobs.png');
-  background-size:cover;
+  background-image: url("/src/assets/blobs.png");
+  background-size: contain;
+  background-repeat: no-repeat;
 }
-.AboutMe h1{
+
+.AboutMe h1 {
   margin-left: 10%;
+  /* ensure no extra top gap from heading itself */
+  margin-top: 0; /* new (redundant with first-child rule, but explicit here) */
 }
- 
-.Blobs{
+
+.Blobs {
   pointer-events: none;
   position: absolute;
   width: 100%;
@@ -161,7 +203,7 @@ html{
   opacity: 0.8;
 }
 
-.GlassCard{
+.GlassCard {
   width: 85%;
   height: 60%;
   margin-top: 2%;
@@ -177,25 +219,27 @@ html{
   margin-left: 10%;
 }
 
-.GlassCard p{
+.GlassCard p {
   font-size: 1.4rem;
   width: 60%;
 }
-.GlassCard img{
+
+.GlassCard img {
   bottom: 0;
 }
 
-.GlassCard div{
+.GlassCard div {
   height: 100%;
   display: flex;
 }
 
-.cardcontainer{
+.ScrollToTopContainer {
   position: fixed;
   right: 20px;
   bottom: 20px;
 }
-.holographic-card {
+
+.ScrollToTop {
   width: 60px;
   height: 60px;
   background: #111;
@@ -207,43 +251,65 @@ html{
   border-radius: 50px;
   transition: all 0.5s ease;
 }
-.holographic-card img{
+
+.ScrollToTop img {
   width: 30px;
   height: 30px;
 }
-.holographic-card h2 {
+
+.ScrollToTop h2 {
   color: #0ff;
   font-size: 2rem;
   position: relative;
   z-index: 2;
 }
 
-.holographic-card::before {
-  content: '';
+.ScrollToTop::before {
+  content: "";
   position: absolute;
   top: -50%;
   left: -50%;
   width: 200%;
   height: 200%;
   background: linear-gradient(
-    0deg, 
-    transparent, 
-    transparent 30%, 
-    rgba(0,255,255,0.3)
+    0deg,
+    transparent,
+    transparent 30%,
+    rgba(0, 255, 255, 0.3)
   );
   transform: rotate(-45deg);
   transition: all 0.5s ease;
   opacity: 0;
-  cursor:pointer;
+  cursor: pointer;
 }
 
-.holographic-card:hover {
+.ScrollToTop:hover {
   transform: scale(1.05);
-  box-shadow: 0 0 20px rgba(0,255,255,0.5);
-  cursor:pointer;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+  cursor: pointer;
 }
 
-.holographic-card:hover::before {
+.ScrollToTop:hover::before {
   opacity: 1;
   transform: rotate(-45deg) translateY(100%);
+}
+
+.Experience {
+  width: 100%;
+  height: 800px;
+  display: inline-block;
+  overflow: hidden;
+  position: relative;
+  background: black;
+}
+
+.Experience h1 {
+  margin-left: 10%;
+  margin-top: 0; /* mirror AboutMe for consistency */
+}
+.LogoButton{
+  outline: none;
+  background: none;
+  border: none;
+  cursor: pointer;
 }

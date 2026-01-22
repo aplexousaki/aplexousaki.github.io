@@ -24,7 +24,7 @@ function ScrollToTopButton() {
   return (
     <button
       onClick={scrollToTop}
-      className='holographic-card'
+      className='ScrollToTop'
       title="Scroll to top"
     >
       <img 
