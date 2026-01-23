@@ -1,0 +1,55 @@
+{
+    "experiences": [
+        {
+        "title": "Freelance Software Engineer",
+        "company": "Self-Employed",
+        "location": "Heraklion, Greece",
+        "startDate": "June 2025",
+        "endDate": "Present",
+        "responsibilities": [
+            "Developed and maintained web applications using React and Node.js.",
+            "Collaborated with cross-functional teams to define project requirements and deliverables.",
+            "Implemented responsive design principles to enhance user experience across devices."
+        ]
+        },
+        {
+        "title": "XR Software Developer & UI/UX Designer",
+        "company": "ORamaVR SA",
+        "location": "Heraklion, Greece",
+        "startDate": "September 2022",
+        "endDate": "June 2025",
+        "responsibilities": [
+            "Served as a core engineer for four commercial medical training applications, focusing on UI/UX and interactive game mechanisms.",
+            "Designed and implemented interactive, modular, and data-driven interfaces using Unity and C#, optimised for cross-platform deployment.",
+            "Developed custom SDK features (interactive components, animation systems, analytics modules, event handlers) to support scalable application development.",
+            "Collaborated with designers and clinical experts to translate usability requirements into functional prototypes and production-ready UI.",
+            "Shipped and maintained released simulations, delivering continuous updates, performance optimizations, and user-driven feature improvements."
+        ]
+        },{
+        "title": "Full-Stack Software Engineer Intern",
+        "company": "Sapienza University of Rome",
+        "location": "Rome, Italy",
+        "startDate": "October 2023",
+        "endDate": "February 2024",
+        "responsibilities": [
+            "Contributed to TraVIS, a visual analytics web system for analyzing user interaction data.",
+            "Implemented front-end logic, data visualization components, and API communication using JavaScript, MongoDB and Python.",
+            "Collaborated with researchers to evaluate prototypes through process mining and user-trace analysis."
+        ]
+        },
+        {
+        "title": "Research Assistant",
+        "company": "Institute of Computer Science, FORTH-HELLAS",
+        "location": "Heraklion, Greece",
+        "startDate": "July 2019",
+        "endDate": "March 2025",
+        "responsibilities": [
+            "Participated in multiple research projects focused on UI engineering, accessibility, and interaction design.",
+            "Developed and evaluated prototypes using React, Angular, and React Native.",
+            "Conducted heuristic evaluations and user studies to improve interaction workflows.",
+            "Assisted teaching programming and HCI courses for undergraduate students."
+        ]
+        }
+        
+    ]
+}

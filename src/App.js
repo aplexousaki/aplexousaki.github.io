@@ -1,11 +1,14 @@
 import "./styles/App.css";
-import jumbotron from "./assets/jumbotron-blob.png";
+import jumbotron from "./assets/jumbotron-black (1).png";
 import logo from "./assets/logo.png";
+import mailIcon from "./assets/email.png";
 import NavItem from "./NavItem";
 import vr_photo from "./assets/vr_photo.png";
 import React, { useState, useRef, useEffect } from "react";
 import ScrollToTopButton from "./ScrollToTop";
 import BlobCursor from "./BlobCursor";
+import ExperienceList from "./ExperienceList";
+
 function App() {
   const sections = [
     { id: "aboutMe", label: "About Me" },
@@ -19,7 +22,7 @@ function App() {
   const [activeSection, setActiveSection] = useState("null");
 
   useEffect(() => {
-    const NAV_OFFSET = 80; // px — match your navbar height
+    const NAV_OFFSET = 200; // px — match your navbar height
     const sectionEls = sections
       .map((s) => document.getElementById(s.id))
       .filter(Boolean);
@@ -68,17 +71,18 @@ function App() {
     };
   }, [sections]);
 
-
   const handleScrollTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   return (
     <div className="App">
       <BlobCursor />
       <div className="NavBar">
-        <button onClick={handleScrollTop} className="LogoButton"><img className="NavBarLogo" src={logo} alt="logo"></img></button>
-        
+        <button onClick={handleScrollTop} className="LogoButton">
+          <img className="NavBarLogo" src={logo} alt="logo"></img>
+        </button>
+
         <div>
           {sections.map((section) => (
             <NavItem
@@ -93,6 +97,7 @@ function App() {
 
         <button className="PrimaryButton">
           <span>Contact Me</span>
+          <img src={mailIcon}/>
         </button>
       </div>
 
@@ -101,25 +106,41 @@ function App() {
       <div id="aboutMe" className="AboutMe" data-section>
         <h1>About Me</h1>
         <div className="GlassCard">
-          <div>
+          <div id="profile-pic">
             <img src={vr_photo} alt="Just me wearing a VR headset" />
           </div>
-          <p>
-            Software Engineer with more than 3 years experience in interactive
-            systems, XR development, and data-driven application design. Skilled
-            in JavaScript/TypeScript, React, C#, and Unity, I combine software
-            engineering with a strong sense of creativity and visual design.My
-            work focuses on web and immersive technologies, building intuitive,
-            modular, and engaging applications, systems, and simulations. I’m
-            particularly interested in creating user experiences that merge
-            technical depth with aesthetics, fostering learning, exploration,
-            and innovation across digital environments..
+          <div className="AboutMeContent">
+            <h3>
+            Hi, I’m Alexandra Plexousaki, an MSc Software Engineer from Greece with a strong
+            interest in <span>Extended Reality (XR)</span>, <span>Frontend engineering</span> and <span>UI/UX design</span>. 
+            </h3>
+            <p>
+            I enjoy working on interactive systems that combine technical depth
+            with creative interface designs, aiming to create experiences that
+            are intuitive, modular, and visually clear.
+           
+            I am particularly drawn to projects that explore how people interact
+            with technology beyond traditional screens, and how design decisions
+            shape usability in all kinds of digital environments.
+            </p>
+            <p>
+            Outside of development, I am always chasing creativity, with an interest in visual design and
+            enjoy exploring new tools and interaction paradigms.
           </p>
+          </div>
+          
         </div>
       </div>
 
-      <div className="Experience" data-section>
-        <h1 id="experience">Experience</h1>
+      <div id="experience" className="Experience" data-section>
+        <h1>Experience</h1>
+        <ExperienceList /> 
+      </div>
+
+
+<div  className="Experience" data-section>
+        <h1><span style={{color:"#ff00b2"}}>My</span> Experience</h1>
+        <ExperienceList /> 
       </div>
 
       <div className="ScrollToTopContainer">
