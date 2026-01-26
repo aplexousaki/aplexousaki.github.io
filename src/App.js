@@ -8,6 +8,7 @@ import React, { useState, useRef, useEffect } from "react";
 import ScrollToTopButton from "./ScrollToTop";
 import BlobCursor from "./BlobCursor";
 import ExperienceList from "./ExperienceList";
+import EducationSection from "./Education";
 
 function App() {
   const sections = [
@@ -96,8 +97,8 @@ function App() {
         </div>
 
         <button className="PrimaryButton">
-          <span>Contact Me</span>
-          <img src={mailIcon}/>
+          <span>Contact</span>
+          <img src={mailIcon} />
         </button>
       </div>
 
@@ -111,36 +112,39 @@ function App() {
           </div>
           <div className="AboutMeContent">
             <h3>
-            Hi, I’m Alexandra Plexousaki, an MSc Software Engineer from Greece with a strong
-            interest in <span>Extended Reality (XR)</span>, <span>Frontend engineering</span> and <span>UI/UX design</span>. 
+              Hi, I’m Alexandra Plexousaki, an MSc Software Engineer from Greece
+              with a strong interest in <span>Extended Reality (XR)</span>,{" "}
+              <span>Frontend engineering</span> and <span>UI/UX design</span>.
             </h3>
             <p>
-            I enjoy working on interactive systems that combine technical depth
-            with creative interface designs, aiming to create experiences that
-            are intuitive, modular, and visually clear.
-           
-            I am particularly drawn to projects that explore how people interact
-            with technology beyond traditional screens, and how design decisions
-            shape usability in all kinds of digital environments.
+              I enjoy working on interactive systems that combine technical
+              depth with creative interface designs, aiming to create
+              experiences that are intuitive, modular, and visually clear. I am
+              particularly drawn to projects that explore how people interact
+              with technology beyond traditional screens, and how design
+              decisions shape usability in all kinds of digital environments.
             </p>
             <p>
-            Outside of development, I am always chasing creativity, with an interest in visual design and
-            enjoy exploring new tools and interaction paradigms.
-          </p>
+              Outside of development, I am always chasing creativity, with an
+              interest in visual design and enjoy exploring new tools and
+              interaction paradigms.
+            </p>
           </div>
-          
         </div>
       </div>
 
-      <div id="experience" className="Experience" data-section>
+      <div id="experience" className="Section" data-section>
         <h1>Experience</h1>
-        <ExperienceList /> 
+        <ExperienceList />
       </div>
 
+      <div id="education" className="Section" data-section>
+        <h1>Education</h1>
+        <EducationSection />
+      </div>
 
-<div  className="Experience" data-section>
-        <h1><span style={{color:"#ff00b2"}}>My</span> Experience</h1>
-        <ExperienceList /> 
+      <div id="skills" className="Section" data-section>
+        <h1>Skills</h1>
       </div>
 
       <div className="ScrollToTopContainer">

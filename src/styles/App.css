@@ -60,9 +60,8 @@ html {
 }
 
 .Jumbotron {
-  width: 90vw;
+  width: 100vw;
   display: flex;
-  margin: 0 auto;
   border-radius: 20px;
   margin-top: 0; /* was 2% */
 }
@@ -134,7 +133,7 @@ html {
 }
 
 .PrimaryButton {
-  width: 8vw;
+  width: 7vw;
   height: 35px;
   background-color: white;
   color: #ff00b2;
@@ -205,7 +204,7 @@ html {
 }
 
 .AboutMe h1 {
-  margin-left: 10%;
+  margin-left: 6%;
   /* ensure no extra top gap from heading itself */
   margin-top: 0; /* new (redundant with first-child rule, but explicit here) */
 }
@@ -224,7 +223,7 @@ html {
   min-height: clamp(300px, 60vh, 700px);
 
   margin-top: 2%;
-  margin-left: 10%;
+  margin-left: 6%;
 
   background: rgba(255, 255, 255, 0.309);
   backdrop-filter: blur(20px);
@@ -337,7 +336,7 @@ html {
   transform: rotate(-45deg) translateY(100%);
 }
 
-.Experience {
+.Section {
   width: 100%;
   height: auto;
   display: inline-block;
@@ -350,8 +349,8 @@ html {
   
 }
 
-.Experience h1 {
-  margin-left: 10%;
+.Section h1 {
+  margin-left: 6%;
   margin-top: 0; /* mirror AboutMe for consistency */
 }
 .LogoButton {
