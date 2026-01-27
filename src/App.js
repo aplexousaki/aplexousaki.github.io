@@ -9,6 +9,9 @@ import ScrollToTopButton from "./ScrollToTop";
 import BlobCursor from "./BlobCursor";
 import ExperienceList from "./ExperienceList";
 import EducationSection from "./Education";
+import downloadIcon from "./assets/download.png";
+import linkedinIcon from "./assets/linkedin.png";
+import googleScholarIcon from "./assets/Google_Scholar_logo.svg.png";
 
 function App() {
   const sections = [
@@ -129,6 +132,28 @@ function App() {
               interest in visual design and enjoy exploring new tools and
               interaction paradigms.
             </p>
+            <ul>
+              <li>
+                <a href="/Alexandra_Plexousaki_CV.pdf" download>
+                  {/* <img src={downloadIcon} alt="Download CV" /> */}
+                  Download CV
+                </a>
+              </li>
+              <li>
+                <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/alexandra-plexousaki/" >
+                  {/* <img src={linkedinIcon} alt="LinkedIn" /> */}
+                  LinkedIn
+                </a>
+              </li>
+              <li>
+                <a target="_blank" rel="noopener noreferrer" href="https://scholar.google.com/citations?user=_Tx-XfUAAAAJ&hl=en">
+                  {/* <img src={googleScholarIcon} alt="Google Scholar" /> */}
+                  Google Scholar
+                </a>
+              </li>
+              
+            </ul>
+            
           </div>
         </div>
       </div>
