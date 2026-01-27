@@ -4,7 +4,7 @@ import logo from "./assets/logo.png";
 import mailIcon from "./assets/email.png";
 import NavItem from "./NavItem";
 import vr_photo from "./assets/vr_photo.png";
-import React, { useState, useRef, useEffect } from "react";
+import { useState, useEffect } from "react";
 import ScrollToTopButton from "./ScrollToTop";
 import BlobCursor from "./BlobCursor";
 import ExperienceList from "./ExperienceList";
@@ -12,6 +12,7 @@ import EducationSection from "./Education";
 import downloadIcon from "./assets/download.png";
 import linkedinIcon from "./assets/linkedin.png";
 import googleScholarIcon from "./assets/Google_Scholar_logo.svg.png";
+import SkillsSection from "./SkillsSection";
 
 function App() {
   const sections = [
@@ -170,6 +171,11 @@ function App() {
 
       <div id="skills" className="Section" data-section>
         <h1>Skills</h1>
+        <SkillsSection />
+      </div>
+
+      <div id="projects" className="Section" data-section>
+        <h1>Projects</h1>
       </div>
 
       <div className="ScrollToTopContainer">

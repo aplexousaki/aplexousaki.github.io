@@ -18,12 +18,12 @@
   padding: 15px 15px 15px 15px;
   margin-bottom: 15px;
   /* border: 1px solid #ffffff5e; */
-  width: 45%;
+  width: 47%;
   height: 50vh;
   display: flex;
   align-content: center;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-evenly;
   flex-direction: column;
   text-align: justify;
 }
@@ -39,7 +39,7 @@
 }
 
 .topSection div {
-  height: 220px;
+  height: 181px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -47,4 +47,25 @@
 
 .topSection div p {
   margin: 0;
+}
+
+.topSection div p:nth-child(1){
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+.topSection div p:nth-child(2){
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+.topSection div p:nth-child(3){
+  font-weight: 500;
+  font-size: 1.4rem;
+}
+.topSection div p:nth-child(4){
+  font-weight: 500;
+  font-size: 1.4rem;
+}
+.topSection div p:nth-child(5){
+  font-weight: 400;
+  font-size: 1.3rem;
 }

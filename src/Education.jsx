@@ -7,21 +7,41 @@ function EducationSection() {
     <div className="EducationSection">
       <div className="EducationItem">
         <div className="topSection">
-          <img src={uoc_logo} alt="" width="220px" height="220px" />
+          <img src={uoc_logo} alt="" width="160px" height="160px" />
           <div>
-            <p style={{ fontWeight: 700, fontSize: "1.5rem" }}>
-              Bachelor of Science - BS
-            </p>
-            <p style={{ fontWeight: 700, fontSize: "1.5rem" }}>
-              Computer Science
-            </p>
-            <p style={{ fontWeight: 600, fontSize: "1.4rem" }}>
-              University of Crete
-            </p>
-            <p style={{ fontWeight: 600, fontSize: "1.4rem" }}>
-              Department of Computer Science
-            </p>
-            <p style={{ fontWeight: 500, fontSize: "1.3rem" }}>2018 - 2022</p>
+            <p>Master of Science - MS</p>
+            <p>Computer Science & Engineering</p>
+            <p>University of Crete</p>
+            <p>Department of Computer Science</p>
+            <p>2022 - 2025</p>
+          </div>
+        </div>
+        {/* <p style={{ fontWeight: 400, width: "80%", fontSize: "1.3rem" }}>
+          
+         Technical focus: Computer graphics, human-computer interaction and Cloud Computing 
+        </p> */}
+        <p style={{ fontWeight: 500, width: "80%", fontSize: "1.3rem" }}>
+          Thesis:{" "}
+          <span style={{ fontStyle: "italic" }}>
+            “XRSynthesizer: Context-Driven Assembly of XR Widgets in Real Time”:
+          </span>{" "}
+          Designed and developed a modular XR framework enabling real-time,
+          cloud-driven integration of interactive 3D UI components across XR
+          applications.{" "}
+        </p>
+        <a href="">
+          Read More
+        </a>
+      </div>
+      <div className="EducationItem">
+        <div className="topSection">
+          <img src={uoc_logo} alt="" width="160px" height="160px" />
+          <div>
+            <p>Bachelor of Science - BS</p>
+            <p>Computer Science</p>
+            <p>University of Crete</p>
+            <p>Department of Computer Science</p>
+            <p>2018 - 2022</p>
           </div>
         </div>
         <p style={{ fontWeight: 500, width: "80%", fontSize: "1.3rem" }}>
@@ -31,41 +51,11 @@ function EducationSection() {
           </span>{" "}
           — iOS app in React Native for accessible outfit recommendations.{" "}
         </p>
+        <a href="#projects">
+          Read More
+        </a>
       </div>
-      <div className="EducationItem">
-        <div className="topSection">
-          <img src={uoc_logo} alt="" width="220px" height="220px" />
-          <div>
-            <p style={{ fontWeight: 700, fontSize: "1.5rem" }}>
-              Master of Science - MS
-            </p>
-            <p style={{ fontWeight: 700, fontSize: "1.5rem" }}>
-              Computer Science & Engineering
-            </p>
-            <p style={{ fontWeight: 600, fontSize: "1.4rem" }}>
-              University of Crete
-            </p>
-            <p style={{ fontWeight: 600, fontSize: "1.4rem" }}>
-              Department of Computer Science
-            </p>
-            <p style={{ fontWeight: 500, fontSize: "1.3rem" }}>2022 - 2025</p>
-          </div>
-        </div>
-         {/* <p style={{ fontWeight: 400, width: "80%", fontSize: "1.3rem" }}>
-          
-         Technical focus: Computer graphics, human-computer interaction and Cloud Computing 
-        </p> */}
-        <p style={{ fontWeight: 500, width: "80%", fontSize: "1.3rem" }}>
-          Thesis:{" "}
-          <span style={{ fontStyle: "italic" }}>
-            “XRSynthesizer: Context-Driven Assembly of XR Widgets in
-            Real Time”:
-          </span>{" "}
-          Designed and developed a modular XR framework enabling real-time,
-          cloud-driven integration of interactive 3D UI components across XR
-          applications.{" "}
-        </p>
-      </div>
+      
     </div>
   );
 }

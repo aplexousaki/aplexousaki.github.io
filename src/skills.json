@@ -1,0 +1,150 @@
+{
+    "skills": [
+        {
+            "category": "Programming Languages",
+            "skill": [
+                {
+                    "name": "C#",
+                    "icon": "/c-sharp.png"
+                },
+                {
+                    "name": "JavaScript",
+                    "icon": "/js.png"
+                },
+                {
+                    "name": "Typescript",
+                    "icon": "/typescript.png"
+                },
+                {
+                    "name": "C++",
+                    "icon": "/cpp.png"
+                },
+                {
+                    "name": "SQL",
+                    "icon": "/sql.png"
+                },
+                {
+                    "name": "Python",
+                    "icon": "/python.png"
+                },
+                {
+                    "name": "HTML5/CSS6",
+                    "icon": "/htmlcss.png"
+                }
+            ]
+        },
+        {
+            "category": "Frameworks & Libraries",
+            "skill": [
+                {
+                    "name": "Node.js",
+                    "icon": "/nodejs.png"
+                },
+                {
+                    "name": "React",
+                    "icon": "/react.png"
+                },
+                {
+                    "name": "React Native",
+                    "icon": "/reactnative.png"
+                },
+                {
+                    "name": "Angular",
+                    "icon": "/angular.png"
+                },
+                {
+                    "name": "Express",
+                    "icon": "/express.png"
+                },
+                {
+                    "name": "Unity",
+                    "icon": "/unity.png"
+                },
+                {
+                    "name": ".NET",
+                    "icon": "/dotnet.png"
+                },
+                {
+                    "name": "REST APIs",
+                    "icon": "/restapi.png"
+                },
+                {
+                    "name": "OpenXR",
+                    "icon": "/openxr.png"
+                },
+                {
+                    "name": "Meta Interaction SDK",
+                    "icon": "/metainteraction.png"
+                }
+            ]
+        },
+        {
+            "category": "Databases",
+            "skill": [
+                {
+                    "name": "MongoDB",
+                    "icon": "/mongodb.png"
+                },
+                {
+                    "name": "MySQL",
+                    "icon": "/mysql.png"
+                }
+            ]
+        },
+        {
+            "category": "Cloud & DevOps",
+            "skill": [
+                {
+                    "name": "AWS",
+                    "icon": "/aws.png"
+                },
+                {
+                    "name": "Docker",
+                    "icon": "/docker.png"
+                },
+                {
+                    "name": "Git",
+                    "icon": "/git.png"
+                },
+                {
+                    "name": "GitHub",
+                    "icon": "/github.png"
+                }
+            ]
+        },
+        {
+            "category": "Design & Prototyping",
+            "skill": [
+                {
+                    "name": "Figma",
+                    "icon": "/figma.png"
+                },
+                {
+                    "name": "Adobe XD",
+                    "icon": "/adobexd.png"
+                },
+                {
+                    "name": "Canva",
+                    "icon": "/canva.png"
+                }
+            ]
+        },
+        {
+            "category": "Other Skills",
+            "skill": [
+                {
+                    "name": "Agile Methodologies",
+                    "icon": "/agile.png"
+                },
+                {
+                    "name": "UI/UX Design",
+                    "icon": "/uiux.png"
+                },
+                {
+                    "name": "Problem Solving",
+                    "icon": "/problemsolving.png"
+                }
+            ]
+        }
+    ]
+}
