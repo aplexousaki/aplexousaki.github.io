@@ -18,7 +18,7 @@ function App() {
   ];
 
   const [activeSection, setActiveSection] = useState("null");
-
+  const email = "alexandra" + "plex" + "@gmail.com";
   useEffect(() => {
     const NAV_OFFSET = 200; // px — match your navbar height
     const sectionEls = sections
@@ -93,10 +93,10 @@ function App() {
           ))}
         </div>
 
-        <button className="PrimaryButton">
+        <a className="PrimaryButton" href={`mailto:${email}`}>
           <span>Contact</span>
           <img src="/assets/email.png" />
-        </button>
+        </a>
       </div>
 
       <img src="/assets/jumbotron.png" className="Jumbotron" alt="Jumbotron" />
