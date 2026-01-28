@@ -1,6 +1,5 @@
 // ScrollToTopButton.jsx
 import React, { useState, useEffect } from 'react';
-import arrowup from './assets/arrowup.png';
 
 function ScrollToTopButton() {
   const [isVisible, setIsVisible] = useState(false);
@@ -28,7 +27,7 @@ function ScrollToTopButton() {
       title="Scroll to top"
     >
       <img 
-      src={arrowup}/>
+      src="/assets/arrowup.png"/>
     </button>
   );
 }

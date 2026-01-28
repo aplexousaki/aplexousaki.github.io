@@ -1,13 +1,12 @@
 import ExperienceItem from "./ExperienceItem";
 import data from "./experience.json";
 import "./styles/Education.css";
-import uoc_logo from "./assets/UoC_logo.png";
 function EducationSection() {
   return (
     <div className="EducationSection">
       <div className="EducationItem">
         <div className="topSection">
-          <img src={uoc_logo} alt="" width="160px" height="160px" />
+          <img src="/assets/UoC_logo.png" alt="" width="160px" height="160px" />
           <div>
             <p>Master of Science - MS</p>
             <p>Computer Science & Engineering</p>
@@ -35,7 +34,7 @@ function EducationSection() {
       </div>
       <div className="EducationItem">
         <div className="topSection">
-          <img src={uoc_logo} alt="" width="160px" height="160px" />
+          <img src="/assets/UoC_logo.png" alt="" width="160px" height="160px" />
           <div>
             <p>Bachelor of Science - BS</p>
             <p>Computer Science</p>

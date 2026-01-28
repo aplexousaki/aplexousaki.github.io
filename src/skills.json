@@ -38,7 +38,7 @@
             "skill": [
                 {
                     "name": "Node.js",
-                    "icon": "/nodejs.png"
+                    "icon": "/node-js.png"
                 },
                 {
                     "name": "React",
@@ -46,7 +46,7 @@
                 },
                 {
                     "name": "React Native",
-                    "icon": "/reactnative.png"
+                    "icon": "/react.png"
                 },
                 {
                     "name": "Angular",
@@ -62,11 +62,11 @@
                 },
                 {
                     "name": ".NET",
-                    "icon": "/dotnet.png"
+                    "icon": "/net.png"
                 },
                 {
                     "name": "REST APIs",
-                    "icon": "/restapi.png"
+                    "icon": "/rest.png"
                 },
                 {
                     "name": "OpenXR",
@@ -74,24 +74,10 @@
                 },
                 {
                     "name": "Meta Interaction SDK",
-                    "icon": "/metainteraction.png"
+                    "icon": "/meta-Logo.png"
                 }
             ]
-        },
-        {
-            "category": "Databases",
-            "skill": [
-                {
-                    "name": "MongoDB",
-                    "icon": "/mongodb.png"
-                },
-                {
-                    "name": "MySQL",
-                    "icon": "/mysql.png"
-                }
-            ]
-        },
-        {
+        },{
             "category": "Cloud & DevOps",
             "skill": [
                 {
@@ -112,6 +98,20 @@
                 }
             ]
         },
+        {
+            "category": "Databases",
+            "skill": [
+                {
+                    "name": "MongoDB",
+                    "icon": "/mongodb.png"
+                },
+                {
+                    "name": "MySQL",
+                    "icon": "/mysql.png"
+                }
+            ]
+        },
+        
         {
             "category": "Design & Prototyping",
             "skill": [
@@ -142,7 +142,11 @@
                 },
                 {
                     "name": "Problem Solving",
-                    "icon": "/problemsolving.png"
+                    "icon": "/problem-solving.png"
+                },
+                {
+                    "name": "Usability Testing",
+                    "icon": "/usability.png"
                 }
             ]
         }

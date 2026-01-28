@@ -1,17 +1,10 @@
 import "./styles/App.css";
-import jumbotron from "./assets/jumbotron-black (1).png";
-import logo from "./assets/logo.png";
-import mailIcon from "./assets/email.png";
 import NavItem from "./NavItem";
-import vr_photo from "./assets/vr_photo.png";
 import { useState, useEffect } from "react";
 import ScrollToTopButton from "./ScrollToTop";
 import BlobCursor from "./BlobCursor";
 import ExperienceList from "./ExperienceList";
 import EducationSection from "./Education";
-import downloadIcon from "./assets/download.png";
-import linkedinIcon from "./assets/linkedin.png";
-import googleScholarIcon from "./assets/Google_Scholar_logo.svg.png";
 import SkillsSection from "./SkillsSection";
 
 function App() {
@@ -85,7 +78,7 @@ function App() {
       <BlobCursor />
       <div className="NavBar">
         <button onClick={handleScrollTop} className="LogoButton">
-          <img className="NavBarLogo" src={logo} alt="logo"></img>
+          <img className="NavBarLogo" src="/assets/logo.png" alt="logo"></img>
         </button>
 
         <div>
@@ -102,17 +95,17 @@ function App() {
 
         <button className="PrimaryButton">
           <span>Contact</span>
-          <img src={mailIcon} />
+          <img src="/assets/email.png" />
         </button>
       </div>
 
-      <img src={jumbotron} className="Jumbotron" alt="Jumbotron" />
+      <img src="/assets/jumbotron.png" className="Jumbotron" alt="Jumbotron" />
 
-      <div id="aboutMe" className="AboutMe" data-section>
+      <div id="aboutMe" style={{backgroundImage: "url('/assets/blobs.png')"}} className="AboutMe" data-section>
         <h1>About Me</h1>
         <div className="GlassCard">
           <div id="profile-pic">
-            <img src={vr_photo} alt="Just me wearing a VR headset" />
+            <img src="/assets/vr_photo.png" alt="Just me wearing a VR headset" />
           </div>
           <div className="AboutMeContent">
             <h3>
@@ -159,22 +152,22 @@ function App() {
         </div>
       </div>
 
-      <div id="experience" className="Section" data-section>
+      <div id="experience" style={{backgroundImage: "url('/assets/Blobs_2.png')"}} className="Section" data-section>
         <h1>Experience</h1>
         <ExperienceList />
       </div>
 
-      <div id="education" className="Section" data-section>
+      <div id="education" style={{backgroundImage: "url('/assets/Blobs_2.png')"}} className="Section" data-section>
         <h1>Education</h1>
         <EducationSection />
       </div>
 
-      <div id="skills" className="Section" data-section>
+      <div id="skills" style={{backgroundImage: "url('/assets/Blobs_2.png')"}} className="Section" data-section>
         <h1>Skills</h1>
         <SkillsSection />
       </div>
 
-      <div id="projects" className="Section" data-section>
+      <div id="projects" style={{backgroundImage: "url('/assets/Blobs_2.png')"}} className="Section" data-section>
         <h1>Projects</h1>
       </div>
 

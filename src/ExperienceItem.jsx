@@ -1,6 +1,5 @@
 import { Component } from "react";
 import "./styles/Experience.css";
-import rectangle from "./assets/Rectangle.png";
 function ExperienceItem({
   title,
   company,
@@ -31,7 +30,7 @@ function ExperienceItem({
         ))}
       </ul>
 
-      <img src={rectangle} alt="" / >
+      <img src="/assets/Rectangle.png" alt="" />
 </div>
       
     </div>
