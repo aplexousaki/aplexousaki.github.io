@@ -1,0 +1,128 @@
+{
+  "projects": [
+    {
+      "name": "XRSynthesizer",
+      "description": "XRSynthesizer is a framework for building modular, reusable XR user interfaces that can be dynamically assembled at runtime. Instead of hardcoding a single XR UI into an application, XRSynthesizer allows independent XR UI components to be created, stored in the cloud, and loaded on demand based on context. Developers can design and update XR UIs separately from the host application, enabling multiple interactive UI components to coexist and adapt within the same spatial environment. This approach reduces development overhead, improves reusability across projects, and supports flexible, context-aware XR experiences without rebuilding the application.",
+      "media": [
+        {
+          "type": "image",
+          "src": "/assets/xrsynthesizer_overview.png",
+          "alt": "XRSynthesizer overview"
+        },
+        {
+          "type": "image",
+          "src": "/assets/xrsynthesizer_architecture.png",
+          "alt": "XRSynthesizer architecture"
+        },
+        {
+          "type": "video",
+          "src": "/assets/XRSynthesizer_Demo Video.mp4",
+          "poster": "/assets/xrsynthesizer.png",
+          "caption": "Runtime widget assembly demo"
+        }
+      ],
+      "keywords": ["C#", "Unity", "XR SDK", "AWS"],
+      "publicationLink": "https://link.springer.com/chapter/10.1007/978-3-032-03805-0_6",
+      "publishedIn": "International Conference on Virtual Reality and Mixed Reality. Cham: Springer Nature Switzerland, 2025."
+    },
+    {
+      "name": "Mixed Realms",
+      "description": "Mixed Realmsis an immersive MR experience that blends augmented and virtual reality to engage users in interactive storytelling and exploration. Using a standalone VR/AR headset, users scan their physical environment and seamlessly transition between passthrough AR and fully virtual worlds to solve riddles, complete puzzles, and uncover hidden museum artefacts. As players progress through different stories, they unlock virtual objects that can be placed and interacted with in the real world, creating a playful and educational treasure-hunt experience that can be enjoyed both at home and in museum spaces",
+      "media": [
+        {
+          "type": "video",
+          "src": "/assets/MixedRealms.mp4",
+          "poster": "/assets/MixedRealms.png"
+        }
+      ],
+      "keywords": ["C#", "Unity", "VR/AR"]
+    },
+    {
+      "name": "Trail Shader Graph",
+      "description": "Trail Shader Graph is a Unity shader graph implementation for creating dynamic, visually appealing trails in XR applications. It allows developers to define trail properties such as length, width, and color. The shader enables the creation of immersive visual effects in virtual and augmented reality environments.",
+      "media": [
+        {
+          "type": "video",
+          "src": "/assets/shaderGraphLoop.mp4",
+          "poster": "/assets/shaderGraphLoop.png"
+        },
+        {
+          "type": "video",
+          "src": "/assets/shaderGraphShapes.mp4",
+          "poster": "/assets/shaderGraphShapes.png"
+        }
+      ],
+      "keywords": ["C#", "Unity", "Shader Graph"]
+    }, {
+      "name": "VR Isle Academy",
+      "description": "VR Isle Academy is a virtual reality training platform that provides a high-fidelity digital twin of a surgical robotic system for skill development and practice. The system enables surgeons and trainees to learn and refine robotic surgery techniques in an immersive, portable, and cost-effective VR environment, using hand tracking, controllers, and foot tracking to replicate real surgical workflows. Through structured training scenarios, real-time error detection, and detailed performance analytics, VR Isle Academy supports both supervised and unsupervised training, helping reduce the learning curve and improve proficiency without the need for expensive physical robotic systems ",
+      "media": [
+        {
+          "type": "image",
+          "src": "/assets/vr-isle-academy.png",
+          "alt": "VR Isle Academy surgical simulation"
+        },
+        {
+          "type": "image",
+          "src": "/assets/vr-isle-academy-2.png",
+          "alt": "VR Isle Academy surgical simulation"
+        },
+        {
+          "type": "image",
+          "src": "/assets/vr-isle-academy-3.png",
+          "alt": "VR Isle Academy surgical simulation"
+        }
+      ],
+      "keywords": ["C#", "Unity", "VR Simulation", "Surgical Robotics"],
+      "publicationLink": "https://link.springer.com/chapter/10.1007/978-3-031-82021-2_1",
+      "publishedIn": "Computer Graphics International Conference. Cham: Springer Nature Switzerland, 2024."
+    },
+    {
+      "name": "Vesti-AmI: An Intelligent and Accessible Wardrobe",
+      "description": "Vesti-AmI is a work-in-progress prototype of an intelligent wardrobe cooperating with the technological infrastructure of the Intelligent Home, aiming to assist a wide variety of users (i.e. adults, children, elderly, and people with disabilities) in getting ready for their daily activities in a context-sensitive, user-friendly and intelligent manner.",
+      "media": [
+        {
+          "type": "image",
+          "src": "/assets/vesti-ami.jpg",
+          "alt": "The Vesti-AmI concept"
+        },
+        {
+          "type": "image",
+          "src": "/assets/vesti-ami-cover.png",
+          "alt": "The Vesti-AmI concept"
+        }
+      ],
+      "publicationLink": "https://ami.ics.forth.gr/en/project/vestiami/?ref=home",
+      "publishedIn": "PETRA '23: Proceedings of the 16th International Conference on PErvasive Technologies Related to Assistive Environments",
+      "keywords": ["React Native", "JavaScript", "iOS", "Accessibility"]
+    },
+    {
+      "name": "Trip Planner",
+      "description": "Trip Planner is a collaborative travel planning application designed for a smart living environment. It enables multiple users to jointly organize a trip by exploring destinations and activities, sharing personal preferences, and making group decisions through voting. Using a combination of a main display and personal devices, users can browse activities, view maps and media, create individual activity lists, and highlight a single favorite activity that is automatically included in the trip plan. The system intelligently combines all user inputs to generate an optimized travel itinerary, which can then be interactively adjusted through drag-and-drop scheduling, voice commands, and gestures, ensuring a flexible, engaging, and personalized trip planning experience.",
+      "media": [
+        {
+          "type": "image",
+          "src": "/assets/tripplanner.png",
+          "alt": "Trip Planner interface"
+        }
+      ],
+      "keywords": ["Angular", "TypeScript", "Intelligent Environments", "Multimodal Interaction"]
+    },
+    {
+      "name": "TTraVIS: A User Trace Analyzer to Support User-Centered Design of Visual Analytics Solutions",
+      "description": "TraVIS is a Visual Analytics framework designed to support User-Centered Design by quantitatively analyzing user interaction behavior in web-based VA systems. It enables designers to load existing VA applications, collect detailed user interaction traces, and analyze them in relation to supported tasks and interaction paths. By linking user traces to task completion and system usage patterns, TraVIS helps identify ineffective design choices, supports data-driven hypotheses for redesign, and evaluates the impact of iterative changes. The system has been validated through experiments on multiple VA systems, a real-world use case, and expert evaluation, demonstrating its effectiveness in uncovering design issues and strengthening the UCD process.",
+      "media": [
+        {
+          "type": "image",
+          "src": "/assets/travis.jpg",
+          "alt": "TraVIS interface"
+        }
+      ],
+      "keywords": ["Visual Analytics", "Data Analysis", "JavaScript", "Python"],
+      "publicationLink": "https://ieeexplore.ieee.org/document/954241",
+      "publishedIn": "IEEE Transactions on Visualization and Computer Graphics, vol. 31, no. 10, pp. 7614-7631, Oct. 2025"
+    }
+    
+    
+  ]
+}

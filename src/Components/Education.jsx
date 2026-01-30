@@ -1,6 +1,4 @@
-import ExperienceItem from "./ExperienceItem";
-import data from "./experience.json";
-import "./styles/Education.css";
+import "../Styles/Education.css";
 function EducationSection() {
   return (
     <div className="EducationSection">
@@ -19,7 +17,7 @@ function EducationSection() {
           
          Technical focus: Computer graphics, human-computer interaction and Cloud Computing 
         </p> */}
-        <p style={{ fontWeight: 500, width: "80%", fontSize: "1.3rem" }}>
+        <p style={{ fontWeight: 500, width: "85%", height: "50px" }}>
           Thesis:{" "}
           <span style={{ fontStyle: "italic" }}>
             “XRSynthesizer: Context-Driven Assembly of XR Widgets in Real Time”:
@@ -28,9 +26,9 @@ function EducationSection() {
           cloud-driven integration of interactive 3D UI components across XR
           applications.{" "}
         </p>
-        <a href="">
+        {/* <a href="#xrsynthesizer">
           Read More
-        </a>
+        </a> */}
       </div>
       <div className="EducationItem">
         <div className="topSection">
@@ -43,16 +41,16 @@ function EducationSection() {
             <p>2018 - 2022</p>
           </div>
         </div>
-        <p style={{ fontWeight: 500, width: "80%", fontSize: "1.3rem" }}>
+        <p style={{ fontWeight: 500, width: "85%", height: "50px"}}>
           Thesis:{" "}
           <span style={{ fontStyle: "italic" }}>
             “Vesti-AmI: The Intelligent Wardrobe”
           </span>{" "}
           — iOS app in React Native for accessible outfit recommendations.{" "}
         </p>
-        <a href="#projects">
+        {/* <a href="#vestiami">
           Read More
-        </a>
+        </a> */}
       </div>
       
     </div>

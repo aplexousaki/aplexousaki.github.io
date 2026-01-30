@@ -1,5 +1,4 @@
-import { Component } from "react";
-import "./styles/Experience.css";
+import "../Styles/Experience.css";
 function ExperienceItem({
   title,
   company,

@@ -1,5 +1,5 @@
-import "./styles/Skills.css";
-import data from "./skills.json";
+import "../Styles/Skills.css";
+import data from "../Data/skills.json";
 import SkillItem from "./SkillItem";
 
 function SkillsSection() {

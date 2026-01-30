@@ -1,0 +1,93 @@
+.ProjectItem {
+  background: rgba(255, 255, 255, 0.309);
+  backdrop-filter: blur(50px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  padding: 15px 36px 15px 36px;
+  margin-bottom: 30px;
+  /* border: 1px solid #ffffff5e; */
+  width: 45%;
+  margin-right: 10px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  text-align: justify;
+  font-size: 1rem;
+  align-items: space-between;
+  min-height: 835px;
+}
+
+.ProjectItem h3 {
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.ProjectsSection {
+  width: 87%;
+  margin-top: 2%;
+  margin-left: 6%;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: stretch;
+  font-size: 1.2rem;
+  color: black;
+  flex-wrap: wrap;
+}
+
+.Keywords {
+  display: inline;
+  list-style: none;
+  padding: 0;
+  font-style: italic;
+  color: #e0e0e0;
+  font-size: 1rem;
+}
+
+.Keywords li {
+  display: inline;
+}
+
+.Keywords li:after {
+  content: ", ";
+}
+
+.Keywords li:last-child:after {
+  content: "";
+}
+
+.Info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 1rem;
+  justify-content: space-between;
+}
+.Info p {
+  font-style: italic;
+}
+
+hr {
+  width: 100%;
+  opacity: 0.4;
+  background-color: #ff00b2;
+}
+
+.TopSection {
+  width: 100;
+  min-height: 35%;
+}
+
+.TopSection div{
+  height: 253px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+.BottomSection {
+  width: 100%;
+  height: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}

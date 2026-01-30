@@ -1,6 +1,6 @@
 import ExperienceItem from "./ExperienceItem";
-import data from "./experience.json";
-import "./styles/Experience.css";
+import data from "../Data/experience.json";
+import "../Styles/Experience.css";
 
 function ExperienceList() {
   return (

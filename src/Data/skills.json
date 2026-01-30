@@ -133,6 +133,10 @@
             "category": "Other Skills",
             "skill": [
                 {
+                    "name": "Leap Motion Hand Tracking",
+                    "icon": "/leap.png"
+                },
+                {
                     "name": "Agile Methodologies",
                     "icon": "/agile.png"
                 },

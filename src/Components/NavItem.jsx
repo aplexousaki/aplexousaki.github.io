@@ -1,5 +1,4 @@
-import { Component } from "react";
-import "./styles/App.css";
+import "../Styles/App.css";
 
 function NavItem({ targetId, label, isActive, onClick }) {
   const handleClick = () => {

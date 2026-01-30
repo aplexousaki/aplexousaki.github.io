@@ -1,11 +1,12 @@
-import "./styles/App.css";
-import NavItem from "./NavItem";
+import "./Styles/App.css";
+import NavItem from "./Components/NavItem";
 import { useState, useEffect } from "react";
-import ScrollToTopButton from "./ScrollToTop";
-import BlobCursor from "./BlobCursor";
-import ExperienceList from "./ExperienceList";
-import EducationSection from "./Education";
-import SkillsSection from "./SkillsSection";
+import ScrollToTopButton from "./Components/ScrollToTop";
+import BlobCursor from "./Components/BlobCursor";
+import ExperienceList from "./Components/ExperienceList";
+import EducationSection from "./Components/Education";
+import SkillsSection from "./Components/SkillsSection";
+import ProjectsSection from "./Components/ProjectsSection";
 
 function App() {
   const sections = [
@@ -14,6 +15,7 @@ function App() {
     { id: "education", label: "Education" },
     { id: "skills", label: "Skills" },
     { id: "projects", label: "Projects" },
+    { id: "publications", label: "Publications" },
     { id: "beyond", label: "Beyond Code" },
   ];
 
@@ -101,11 +103,19 @@ function App() {
 
       <img src="/assets/jumbotron.png" className="Jumbotron" alt="Jumbotron" />
 
-      <div id="aboutMe" style={{backgroundImage: "url('/assets/blobs.png')"}} className="AboutMe" data-section>
+      <div
+        id="aboutMe"
+        style={{ backgroundImage: "url('/assets/blobs.png')" }}
+        className="AboutMe"
+        data-section
+      >
         <h1>About Me</h1>
         <div className="GlassCard">
           <div id="profile-pic">
-            <img src="/assets/vr_photo.png" alt="Just me wearing a VR headset" />
+            <img
+              src="/assets/vr_photo.png"
+              alt="Just me wearing a VR headset"
+            />
           </div>
           <div className="AboutMeContent">
             <h3>
@@ -134,43 +144,86 @@ function App() {
                 </a>
               </li>
               <li>
-                <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/alexandra-plexousaki/" >
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://www.linkedin.com/in/alexandra-plexousaki/"
+                >
                   {/* <img src={linkedinIcon} alt="LinkedIn" /> */}
                   LinkedIn
                 </a>
               </li>
               <li>
-                <a target="_blank" rel="noopener noreferrer" href="https://scholar.google.com/citations?user=_Tx-XfUAAAAJ&hl=en">
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://scholar.google.com/citations?user=_Tx-XfUAAAAJ&hl=en"
+                >
                   {/* <img src={googleScholarIcon} alt="Google Scholar" /> */}
                   Google Scholar
                 </a>
               </li>
-              
             </ul>
-            
           </div>
         </div>
       </div>
 
-      <div id="experience" style={{backgroundImage: "url('/assets/Blobs_2.png')"}} className="Section" data-section>
+      <div
+        id="experience"
+        style={{ backgroundImage: "url('/assets/Blobs_2.png')" }}
+        className="Section"
+        data-section
+      >
         <h1>Experience</h1>
         <ExperienceList />
       </div>
 
-      <div id="education" style={{backgroundImage: "url('/assets/Blobs_2.png')"}} className="Section" data-section>
+      <div
+        id="education"
+        style={{ backgroundImage: "url('/assets/Blobs_2.png')" }}
+        className="Section"
+        data-section
+      >
         <h1>Education</h1>
         <EducationSection />
       </div>
 
-      <div id="skills" style={{backgroundImage: "url('/assets/Blobs_2.png')"}} className="Section" data-section>
+      <div
+        id="skills"
+        style={{ backgroundImage: "url('/assets/Blobs_2.png')" }}
+        className="Section"
+        data-section
+      >
         <h1>Skills</h1>
         <SkillsSection />
       </div>
 
-      <div id="projects" style={{backgroundImage: "url('/assets/Blobs_2.png')"}} className="Section" data-section>
+      <div
+        id="projects"
+        style={{ backgroundImage: "url('/assets/Blobs_2.png')" }}
+        className="Section"
+        data-section
+      >
         <h1>Projects</h1>
+        <ProjectsSection />
       </div>
 
+      <div
+        id="publications"
+        style={{ backgroundImage: "url('/assets/Blobs_2.png')" }}
+        className="Section"
+        data-section
+      >
+        <h1>Publications & Conferences</h1>
+      </div>
+      <div
+        id="beyond"
+        style={{ backgroundImage: "url('/assets/Blobs_2.png')" }}
+        className="Section"
+        data-section
+      >
+        <h1>Beyond Code</h1>
+      </div>
       <div className="ScrollToTopContainer">
         <ScrollToTopButton />
       </div>

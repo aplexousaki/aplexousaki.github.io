@@ -1,4 +1,4 @@
-import "./styles/Skills.css";
+import "../Styles/Skills.css";
 function SkillItem({
   name,
   icon
